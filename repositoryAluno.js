@@ -9,7 +9,8 @@ async function Listar() {
       a.sobrenome,
       t.descricao AS turma,
       a.login,
-      a.email
+      a.email,
+      a.senha
     FROM aluno a
     LEFT JOIN turma t ON t.id = a.turma
   `;
@@ -67,3 +68,4 @@ async function Excluir(matricula) {
 }
 
 export default { Listar, Inserir, Editar, Excluir };
+
